@@ -220,6 +220,7 @@ const DashboardView = ({ insights }) => {
             </div>
           </CardContent>
         </Card>
+
       </div>
     </div>
   );

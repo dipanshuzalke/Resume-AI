@@ -7,11 +7,12 @@ body {
 }
 
 @layer base {
+  /* Light mode defaults */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --background: 0 0% 100%; /* White background for light mode */
+    --foreground: 0 0% 3.9%; /* Dark text color for light mode */
+    --card: 0 0% 100%; /* White card background */
+    --card-foreground: 0 0% 3.9%; /* Dark text color in cards */
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
     --primary: 0 0% 9%;
@@ -34,15 +35,17 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
+  /* Dark mode overrides */
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --background: 0 0% 3.9%; /* Dark background for dark mode */
+    --foreground: 0 0% 98%; /* Light text color for dark mode */
+    --card: 0 0% 3.9%; /* Dark card background */
+    --card-foreground: 0 0% 98%; /* Light text in cards */
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
+    --primary: 0 0% 98%; /* Light primary color */
+    --primary-foreground: 0 0% 9%; /* Dark primary text */
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 14.9%;
@@ -68,6 +71,7 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition between light/dark modes */
   }
 }
 
@@ -85,7 +89,6 @@ body {
 }
 
 .hero-image {
-  /* transform: rotateX(20deg) scale(0.9) translateY(-50); */
   transform: rotateX(15deg) scale(1);
   transition: transform 0.5s ease-out;
   will-change: transform;

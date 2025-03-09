@@ -45,6 +45,8 @@ export function EntryForm({ type, entries, onChange }) {
       startDate: "",
       endDate: "",
       description: "",
+      strength: "",
+      weakness:"",
       current: false,
     },
   });
@@ -240,6 +242,7 @@ export function EntryForm({ type, entries, onChange }) {
               )}
             </Button>
           </CardContent>
+
           <CardFooter className="flex justify-end space-x-2">
             <Button
               type="button"
