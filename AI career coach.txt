@@ -1,0 +1,20 @@
+1.SELECT column_name 
+FROM information_schema.columns
+WHERE table_name = 'User';
+
+2.SELECT "clerkUserId" FROM "User";
+
+3.SELECT * FROM "User" WHERE "clerkUserId" = 'user_2tQXWIKDe9P32VyCfg9pdoeWt3X';
+
+
+
+For deleting a user
+
+1. DELETE FROM "Assessment"
+WHERE "userId" = (
+    SELECT "id" FROM "User"
+    WHERE "clerkUserId" = 'user_2tQXWIKDe9P32VyCfg9pdoeWt3X'
+);
+
+2. DELETE FROM "User"
+WHERE "clerkUserId" = 'user_2tQXWIKDe9P32VyCfg9pdoeWt3X';

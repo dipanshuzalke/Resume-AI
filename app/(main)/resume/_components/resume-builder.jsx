@@ -147,12 +147,12 @@ export default function ResumeBuilder({ initialContent }) {
   };
 
   return (
-    <div data-color-mode="dark" className="space-y-4">
+    <div data-color-mode="light" className="space-y-4">
       <div className="flex flex-col md:flex-row justify-between items-center gap-2">
-        <h1 className="font-bold gradient-title text-5xl md:text-6xl">
+        <h1 className="font-bold text-black text-5xl md:text-6xl">
           Resume Builder
         </h1>
-        <div className="space-x-2">
+        <div className="space-x-2 pr-10">
           <Button
             variant="destructive"
             onClick={handleSubmit(onSubmit)}
@@ -186,7 +186,7 @@ export default function ResumeBuilder({ initialContent }) {
         </div>
       </div>
 
-      <Tabs value={activeTab} onValueChange={setActiveTab}>
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="pl-10 pr-10 pt-5">
         <TabsList>
           <TabsTrigger value="edit">Form</TabsTrigger>
           <TabsTrigger value="preview">Markdown</TabsTrigger>
@@ -293,46 +293,6 @@ export default function ResumeBuilder({ initialContent }) {
               />
               {errors.skills && (
                 <p className="text-sm text-red-500">{errors.skills.message}</p>
-              )}
-            </div>
-
-            {/* Strength */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-medium">Strength</h3>
-              <Controller
-                name="strength"
-                control={control}
-                render={({ field }) => (
-                  <Textarea
-                    {...field}
-                    className="h-5"
-                    placeholder="List your key strength."
-                    error={errors.strength}
-                  />
-                )}
-              />
-              {errors.strength && (
-                <p className="text-sm text-red-500">{errors.strength.message}</p>
-              )}
-            </div>
-
-             {/* Weakness */}
-             <div className="space-y-4">
-              <h3 className="text-lg font-medium">Weakness</h3>
-              <Controller
-                name="weakness"
-                control={control}
-                render={({ field }) => (
-                  <Textarea
-                    {...field}
-                    className="h-5"
-                    placeholder="List your key weakness."
-                    error={errors.weakness}
-                  />
-                )}
-              />
-              {errors.weakness && (
-                <p className="text-sm text-red-500">{errors.weakness.message}</p>
               )}
             </div>
 

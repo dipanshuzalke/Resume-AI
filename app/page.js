@@ -58,24 +58,24 @@ export default function LandingPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="w-full py-12 md:py-24 bg-muted/50">
+      <section className="w-full py-12 md:py-24 bg-gradient-to-br from-black via-purple-950 to-gray-900">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-white">
             <div className="flex flex-col items-center justify-center space-y-2">
               <h3 className="text-4xl font-bold">50+</h3>
-              <p className="text-muted-foreground">Industries Covered</p>
+              <p className="text-white">Industries Covered</p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-2">
               <h3 className="text-4xl font-bold">1000+</h3>
-              <p className="text-muted-foreground">Interview Questions</p>
+              <p className="text-white">Interview Questions</p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-2">
               <h3 className="text-4xl font-bold">95%</h3>
-              <p className="text-muted-foreground">Success Rate</p>
+              <p className="text-white">Success Rate</p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-2">
               <h3 className="text-4xl font-bold">24/7</h3>
-              <p className="text-muted-foreground">AI Support</p>
+              <p className="text-white">AI Support</p>
             </div>
           </div>
         </div>
@@ -108,7 +108,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 bg-muted/50">
+      <section className="w-full py-12 md:py-24 bg-gradient-to-br from-black via-purple-950 to-gray-900">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold text-center mb-12">
             What Our Users Say
@@ -158,7 +158,7 @@ export default function LandingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="w-full py-12 md:py-24">
+      <section className="w-full py-12 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold mb-4">
@@ -186,7 +186,7 @@ export default function LandingPage() {
 
       {/* CTA Section */}
       <section className="w-full">
-        <div className="mx-auto py-24 gradient rounded-lg">
+        <div className="mx-auto py-24 bg-gradient-to-br from-black via-purple-950 to-gray-900 rounded-lg">
           <div className="flex flex-col items-center justify-center space-y-4 text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter text-primary-foreground sm:text-4xl md:text-5xl">
               Ready to Accelerate Your Career?

@@ -6,7 +6,8 @@ import {
   FileText,
   GraduationCap,
   ChevronDown,
-  StarsIcon
+  StarsIcon,
+  Bot
 } from 'lucide-react'
 import Link from 'next/link'
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
@@ -23,8 +24,8 @@ export default async function Header () {
   await checkUser()
 
   return (
-    <header className='fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60'>
-      <nav className='container mx-auto px-4 h-16 flex items-center justify-between'>
+    <header className='fixed top-0 w-full border-b bg-white  bg-opacity-70 backdrop-blur-md'>
+      <nav className='container mx-auto px-4 h-16 flex items-center justify-between z-50'>
         <Link href='/'>
           <Image
             src={'/logo.png'}
@@ -34,7 +35,6 @@ export default async function Header () {
             className='h-12 py-1 w-auto object-contain'
           />
         </Link>
-
         {/* Action Buttons */}
         <div className='flex items-center space-x-2 md:space-x-4'>
           <SignedIn>
@@ -46,6 +46,7 @@ export default async function Header () {
                 <LayoutDashboard className='h-4 w-4' />
                 Industry Insights
               </Button>
+
               <Button variant='ghost' className='md:hidden w-10 h-10 p-0'>
                 <LayoutDashboard className='h-4 w-4' />
               </Button>
@@ -82,6 +83,12 @@ export default async function Header () {
                     Interview Prep
                   </Link>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href='https://ai-interviewer-eyd5.vercel.app/' className='flex items-center gap-2'>
+                    <Bot className='h-4 w-4' />
+                    AI Interviewer
+                  </Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </SignedIn>
@@ -109,3 +116,7 @@ export default async function Header () {
     </header>
   )
 }
+
+
+
+
